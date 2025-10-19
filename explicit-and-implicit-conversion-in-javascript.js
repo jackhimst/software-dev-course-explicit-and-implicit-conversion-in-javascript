@@ -46,4 +46,4 @@ if (5 == "5") {
 
 // Explicit type conversion example:
 let stringNumber = 55;
-stringdNumber = String("55");
+stringNumber = String("55");
