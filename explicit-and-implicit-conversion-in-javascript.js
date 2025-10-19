@@ -18,15 +18,32 @@ Use console.log() to clearly show the before-and-after type conversions.
 
 */
 
-
-let result = "5" - 2;
+// The string value 5 was converted into a number for the calculation in result. This doesn't change the output,
+// but the Number() conversion makes it more clear what is happening.
+let result = Number("5") - 2;
 console.log("The result is: " + result);
 
-let isValid = Boolean("false");
+// The variable isValid is initialized with a string value undefined.
+// It is changed to a Boolean value on the next line.
+// Before the change, the value would read "false", executing the if statement despite the intention not to.
+let isValid;
+isValid = Boolean(isValid);
 if (isValid) {
     console.log("This is valid!");
 }
 
+// The value in age is converted from a string to a number in the
+// totalAge arithmetic. This changes totalAge from being read as
+// 255 to 30.
 let age = "25";
-let totalAge = age + 5;
+let totalAge = Number(age) + 5;
 console.log("Total Age: " + totalAge);
+
+// Implicit type conversion example:
+if (5 == "5") {
+    console.log("The string is converted to a number before the comparison.");
+}
+
+// Explicit type conversion example:
+let stringNumber = 55;
+stringdNumber = String("55");
